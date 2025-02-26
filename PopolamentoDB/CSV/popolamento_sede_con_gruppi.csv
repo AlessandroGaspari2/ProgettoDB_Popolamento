@@ -1,0 +1,193 @@
+Nome,Numero,IDSedi
+Facoltà di Informatica,15,Gruppo-0
+Facoltà di Informatica,4,Gruppo-0
+Facoltà di Informatica,18,Gruppo-0
+Facoltà di Informatica,8,Gruppo-0
+Facoltà di Informatica,5,Gruppo-0
+Facoltà di Matematica,12,Gruppo-1
+Facoltà di Matematica,17,Gruppo-1
+Facoltà di Matematica,7,Gruppo-1
+Facoltà di Matematica,16,Gruppo-1
+Facoltà di Matematica,17,Gruppo-1
+Facoltà di Fisica,2,Gruppo-2
+Facoltà di Fisica,7,Gruppo-2
+Facoltà di Fisica,19,Gruppo-2
+Facoltà di Fisica,11,Gruppo-2
+Facoltà di Chimica,14,Gruppo-3
+Facoltà di Chimica,14,Gruppo-3
+Facoltà di Biologia,3,Gruppo-4
+Facoltà di Biologia,4,Gruppo-4
+Facoltà di Biologia,20,Gruppo-4
+Facoltà di Medicina,19,Gruppo-5
+Facoltà di Farmacia,14,Gruppo-6
+Facoltà di Farmacia,3,Gruppo-6
+Facoltà di Economia,3,Gruppo-7
+Facoltà di Economia,2,Gruppo-7
+Facoltà di Economia,15,Gruppo-7
+Facoltà di Economia,16,Gruppo-7
+Facoltà di Economia,5,Gruppo-7
+Facoltà di Giurisprudenza,9,Gruppo-8
+Facoltà di Giurisprudenza,9,Gruppo-8
+Facoltà di Giurisprudenza,2,Gruppo-8
+Facoltà di Giurisprudenza,13,Gruppo-8
+Facoltà di Ingegneria Informatica,14,Gruppo-9
+Facoltà di Ingegneria Informatica,7,Gruppo-9
+Facoltà di Ingegneria Informatica,19,Gruppo-9
+Facoltà di Ingegneria Meccanica,6,Gruppo-10
+Facoltà di Ingegneria Meccanica,1,Gruppo-10
+Facoltà di Ingegneria Meccanica,6,Gruppo-10
+Facoltà di Ingegneria Meccanica,5,Gruppo-10
+Facoltà di Ingegneria Meccanica,2,Gruppo-10
+Facoltà di Ingegneria Elettronica,14,Gruppo-11
+Facoltà di Ingegneria Elettronica,5,Gruppo-11
+Facoltà di Ingegneria Civile,15,Gruppo-12
+Facoltà di Ingegneria Biomedica,14,Gruppo-13
+Facoltà di Ingegneria Biomedica,12,Gruppo-13
+Facoltà di Ingegneria Biomedica,15,Gruppo-13
+Facoltà di Ingegneria Biomedica,11,Gruppo-13
+Facoltà di Ingegneria Biomedica,5,Gruppo-13
+Facoltà di Psicologia,18,Gruppo-14
+Facoltà di Psicologia,10,Gruppo-14
+Facoltà di Psicologia,5,Gruppo-14
+Facoltà di Scienze della Comunicazione,17,Gruppo-15
+Facoltà di Scienze Politiche,12,Gruppo-16
+Facoltà di Scienze Politiche,7,Gruppo-16
+Facoltà di Scienze Politiche,10,Gruppo-16
+Facoltà di Scienze Politiche,8,Gruppo-16
+Facoltà di Scienze Politiche,15,Gruppo-16
+Facoltà di Scienze Naturali,18,Gruppo-17
+Facoltà di Scienze Naturali,9,Gruppo-17
+Facoltà di Scienze Ambientali,5,Gruppo-18
+Facoltà di Scienze Ambientali,8,Gruppo-18
+Facoltà di Scienze Ambientali,5,Gruppo-18
+Facoltà di Geologia,9,Gruppo-19
+Facoltà di Geologia,4,Gruppo-19
+Facoltà di Scienze dei Materiali,5,Gruppo-20
+Facoltà di Scienze dei Materiali,13,Gruppo-20
+Facoltà di Scienze dei Materiali,14,Gruppo-20
+Facoltà di Scienze Statistiche,2,Gruppo-21
+Facoltà di Architettura,10,Gruppo-22
+Facoltà di Architettura,12,Gruppo-22
+Facoltà di Architettura,16,Gruppo-22
+Facoltà di Architettura,12,Gruppo-22
+Facoltà di Filosofia,6,Gruppo-23
+Facoltà di Filosofia,2,Gruppo-23
+Facoltà di Filosofia,13,Gruppo-23
+Facoltà di Storia,18,Gruppo-24
+Facoltà di Storia,19,Gruppo-24
+Facoltà di Lettere e Filosofia,4,Gruppo-25
+Facoltà di Lettere e Filosofia,15,Gruppo-25
+Facoltà di Lettere e Filosofia,15,Gruppo-25
+Facoltà di Lettere e Filosofia,13,Gruppo-25
+Facoltà di Lettere e Filosofia,6,Gruppo-25
+Facoltà di Sociologia,5,Gruppo-26
+Facoltà di Sociologia,4,Gruppo-26
+Facoltà di Sociologia,17,Gruppo-26
+Facoltà di Sociologia,1,Gruppo-26
+Facoltà di Antropologia,4,Gruppo-27
+Facoltà di Antropologia,11,Gruppo-27
+Facoltà di Antropologia,9,Gruppo-27
+Facoltà di Antropologia,15,Gruppo-27
+Facoltà di Diritto Internazionale,6,Gruppo-28
+Facoltà di Diritto Internazionale,14,Gruppo-28
+Facoltà di Diritto Internazionale,6,Gruppo-28
+Facoltà di Diritto Internazionale,12,Gruppo-28
+Facoltà di Diritto Internazionale,4,Gruppo-28
+Facoltà di Lingue e Letterature Straniere,19,Gruppo-29
+Facoltà di Scienze Motorie,14,Gruppo-30
+Facoltà di Scienze Motorie,10,Gruppo-30
+Facoltà di Scienze Motorie,10,Gruppo-30
+Facoltà di Scienze Veterinarie,6,Gruppo-31
+Facoltà di Scienze Veterinarie,15,Gruppo-31
+Facoltà di Scienze Veterinarie,16,Gruppo-31
+Facoltà di Scienze Veterinarie,13,Gruppo-31
+Facoltà di Scienze Veterinarie,4,Gruppo-31
+Facoltà di Scienze Agrarie,4,Gruppo-32
+Facoltà di Scienze Agrarie,18,Gruppo-32
+Facoltà di Scienze Agrarie,18,Gruppo-32
+Facoltà di Scienze Agrarie,5,Gruppo-32
+Facoltà di Scienze Agrarie,2,Gruppo-32
+Facoltà di Scienze e Tecnologie Alimentari,2,Gruppo-33
+Facoltà di Scienze e Tecnologie Alimentari,11,Gruppo-33
+Facoltà di Scienze e Tecnologie Alimentari,7,Gruppo-33
+Facoltà di Scienze e Tecnologie Alimentari,12,Gruppo-33
+Facoltà di Scienze e Tecnologie Alimentari,9,Gruppo-33
+Facoltà di Pedagogia,5,Gruppo-34
+Facoltà di Pedagogia,4,Gruppo-34
+Facoltà di Pedagogia,7,Gruppo-34
+Facoltà di Pedagogia,20,Gruppo-34
+Facoltà di Pedagogia,13,Gruppo-34
+Facoltà di Scienze della Formazione,16,Gruppo-35
+Facoltà di Scienze della Formazione,14,Gruppo-35
+Facoltà di Scienze della Formazione,3,Gruppo-35
+Facoltà di Scienze della Formazione,4,Gruppo-35
+Facoltà di Scienze della Formazione,18,Gruppo-35
+Facoltà di Astrofisica,3,Gruppo-36
+Facoltà di Astrofisica,18,Gruppo-36
+Facoltà di Astrofisica,13,Gruppo-36
+Facoltà di Economia Aziendale,16,Gruppo-37
+Facoltà di Economia Aziendale,10,Gruppo-37
+Facoltà di Economia Aziendale,5,Gruppo-37
+Facoltà di Economia Aziendale,7,Gruppo-37
+Facoltà di Statistica Economica,19,Gruppo-38
+Facoltà di Statistica Economica,8,Gruppo-38
+Facoltà di Statistica Economica,14,Gruppo-38
+Facoltà di Marketing e Comunicazione,2,Gruppo-39
+Facoltà di Diritto Pubblico,11,Gruppo-40
+Facoltà di Diritto Privato,8,Gruppo-41
+Facoltà di Diritto Privato,1,Gruppo-41
+Facoltà di Diritto Privato,4,Gruppo-41
+Facoltà di Diritto Privato,2,Gruppo-41
+Facoltà di Diritto Privato,7,Gruppo-41
+Facoltà di Logistica e Trasporti,2,Gruppo-42
+Facoltà di Logistica e Trasporti,13,Gruppo-42
+Facoltà di Design Industriale,11,Gruppo-43
+Facoltà di Urbanistica,12,Gruppo-44
+Facoltà di Urbanistica,14,Gruppo-44
+Facoltà di Urbanistica,6,Gruppo-44
+Facoltà di Urbanistica,15,Gruppo-44
+Facoltà di Urbanistica,13,Gruppo-44
+Facoltà di Scienze Geografiche,1,Gruppo-45
+Facoltà di Scienze Geografiche,9,Gruppo-45
+Facoltà di Scienze Geografiche,3,Gruppo-45
+Facoltà di Scienze Geografiche,4,Gruppo-45
+Facoltà di Neuroscienze,4,Gruppo-46
+Facoltà di Neuroscienze,18,Gruppo-46
+Facoltà di Bioinformatica,5,Gruppo-47
+Facoltà di Bioinformatica,11,Gruppo-47
+Facoltà di Bioinformatica,3,Gruppo-47
+Facoltà di Bioinformatica,6,Gruppo-47
+Facoltà di Bioinformatica,10,Gruppo-47
+Facoltà di Biochimica,7,Gruppo-48
+Facoltà di Biochimica,1,Gruppo-48
+Facoltà di Biochimica,17,Gruppo-48
+Facoltà di Biochimica,12,Gruppo-48
+Facoltà di Biochimica,15,Gruppo-48
+Facoltà di Genetica,8,Gruppo-49
+Facoltà di Immunologia,5,Gruppo-50
+Facoltà di Farmacologia,14,Gruppo-51
+Facoltà di Farmacologia,17,Gruppo-51
+Facoltà di Farmacologia,18,Gruppo-51
+Facoltà di Farmacologia,16,Gruppo-51
+Facoltà di Psicopatologia,14,Gruppo-52
+Facoltà di Psicopatologia,15,Gruppo-52
+Facoltà di Psicopatologia,15,Gruppo-52
+Facoltà di Psicologia del Lavoro,7,Gruppo-53
+Facoltà di Psicologia del Lavoro,9,Gruppo-53
+Facoltà di Psicologia del Lavoro,19,Gruppo-53
+Facoltà di Psicologia del Lavoro,11,Gruppo-53
+Facoltà di Psicologia del Lavoro,1,Gruppo-53
+Facoltà di Intelligenza Artificiale,9,Gruppo-54
+Facoltà di Intelligenza Artificiale,11,Gruppo-54
+Facoltà di Machine Learning,20,Gruppo-55
+Facoltà di Machine Learning,17,Gruppo-55
+Facoltà di Machine Learning,9,Gruppo-55
+Facoltà di Machine Learning,1,Gruppo-55
+Facoltà di Informatica Teorica,3,Gruppo-56
+Facoltà di Informatica Teorica,12,Gruppo-56
+Facoltà di Informatica Teorica,4,Gruppo-56
+Facoltà di Calcolo Numerico,2,Gruppo-57
+Facoltà di Calcolo Numerico,6,Gruppo-57
+Facoltà di Programmazione Logica,13,Gruppo-58
+Facoltà di Programmazione Logica,4,Gruppo-58
+Facoltà di Programmazione Logica,3,Gruppo-58

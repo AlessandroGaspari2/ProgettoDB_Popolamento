@@ -1,0 +1,60 @@
+CodiceCorso,Numero,Anno,Semestre,Aula,Giorni,Iscritti,Tipo,NomeFacoltà
+9907,3,2016,2,Aula-6,"Lun, Mer",51,Normale,Facoltà di Genetica
+2010,4,2025,2,Aula-26,"Mar, Ven, Lun, Mer",101,A Supplenza,Facoltà di Geologia
+7147,5,2016,2,Aula-27,Mar,41,Normale,Facoltà di Scienze e Tecnologie Alimentari
+3826,4,2022,2,Aula-28,"Mar, Gio, Ven, Mer",194,Normale,Facoltà di Statistica Economica
+6916,2,2015,1,Aula-22,"Mer, Mar, Ven",167,Normale,Facoltà di Scienze Naturali
+9314,2,2022,2,Aula-19,"Mer, Mar, Gio",34,Normale,Facoltà di Storia
+5935,5,2017,2,Aula-14,"Gio, Ven",98,A Supplenza,Facoltà di Sociologia
+4807,5,2020,2,Aula-2,"Mer, Ven, Mar",78,A Supplenza,Facoltà di Diritto Privato
+3370,4,2018,1,Aula-4,"Mer, Mar",120,A Supplenza,Facoltà di Diritto Privato
+8711,5,2022,1,Aula-16,Mar,122,A Supplenza,Facoltà di Genetica
+7929,4,2022,1,Aula-17,"Lun, Gio",100,Normale,Facoltà di Filosofia
+4047,1,2017,1,Aula-26,"Ven, Mer, Lun, Mar",107,A Supplenza,Facoltà di Architettura
+3994,2,2025,1,Aula-18,"Mer, Gio, Ven, Mar",54,Normale,Facoltà di Bioinformatica
+1678,3,2010,2,Aula-18,Ven,38,Normale,Facoltà di Farmacologia
+4853,5,2017,2,Aula-3,"Lun, Mer",59,Normale,Facoltà di Psicologia
+1255,4,2020,1,Aula-15,"Ven, Mer, Lun",114,Normale,Facoltà di Storia
+3320,2,2021,2,Aula-19,"Lun, Ven, Mer",127,A Supplenza,Facoltà di Neuroscienze
+5713,4,2025,1,Aula-25,"Ven, Mer",68,Normale,Facoltà di Biochimica
+1158,1,2023,1,Aula-17,"Mar, Lun, Gio, Ven",114,Normale,Facoltà di Giurisprudenza
+3645,3,2017,1,Aula-3,"Mer, Lun, Ven, Mar",50,A Supplenza,Facoltà di Economia
+8797,3,2024,2,Aula-1,"Ven, Mer",19,A Supplenza,Facoltà di Medicina
+9559,5,2023,1,Aula-5,"Mer, Mar, Gio, Lun",61,A Supplenza,Facoltà di Pedagogia
+6825,2,2023,2,Aula-10,"Lun, Mar",17,Normale,Facoltà di Marketing e Comunicazione
+4732,3,2012,2,Aula-9,"Ven, Gio, Mer",10,A Supplenza,Facoltà di Ingegneria Meccanica
+3084,2,2015,1,Aula-17,"Mar, Mer",189,Normale,Facoltà di Psicologia
+2548,3,2024,1,Aula-2,Mar,75,Normale,Facoltà di Giurisprudenza
+6833,2,2012,2,Aula-26,"Gio, Mer, Mar",56,Normale,Facoltà di Statistica Economica
+6475,5,2010,2,Aula-12,Ven,17,Normale,Facoltà di Ingegneria Informatica
+5269,5,2019,1,Aula-20,"Ven, Mer, Gio",192,A Supplenza,Facoltà di Ingegneria Elettronica
+2806,1,2010,1,Aula-5,Gio,199,Normale,Facoltà di Matematica
+1809,3,2017,1,Aula-18,"Mar, Gio, Mer",32,Normale,Facoltà di Marketing e Comunicazione
+9459,1,2013,1,Aula-23,"Mar, Mer",166,A Supplenza,Facoltà di Diritto Privato
+4192,4,2019,2,Aula-22,"Mar, Gio",196,A Supplenza,Facoltà di Economia Aziendale
+5767,4,2015,1,Aula-20,"Mer, Mar, Lun",122,Normale,Facoltà di Economia
+9577,3,2024,2,Aula-22,"Ven, Gio, Mar",103,A Supplenza,Facoltà di Filosofia
+2296,4,2020,1,Aula-15,"Ven, Gio",99,A Supplenza,Facoltà di Antropologia
+8659,4,2022,1,Aula-12,"Gio, Lun",26,A Supplenza,Facoltà di Lingue e Letterature Straniere
+4493,1,2025,2,Aula-18,Lun,40,Normale,Facoltà di Intelligenza Artificiale
+3512,1,2018,1,Aula-1,Ven,149,Normale,Facoltà di Diritto Privato
+6082,3,2014,1,Aula-7,"Gio, Mer, Ven, Lun",124,Normale,Facoltà di Storia
+6136,2,2019,1,Aula-16,"Ven, Mer, Mar, Gio",169,A Supplenza,Facoltà di Scienze della Comunicazione
+4552,3,2023,1,Aula-26,Lun,123,Normale,Facoltà di Lettere e Filosofia
+5778,2,2016,1,Aula-7,"Ven, Mer",136,A Supplenza,Facoltà di Giurisprudenza
+4269,5,2013,2,Aula-7,"Mer, Ven",76,A Supplenza,Facoltà di Scienze e Tecnologie Alimentari
+6642,5,2020,2,Aula-15,"Mar, Gio, Ven, Lun",150,A Supplenza,Facoltà di Neuroscienze
+7689,2,2014,1,Aula-19,"Mer, Mar",39,A Supplenza,Facoltà di Scienze Politiche
+5739,4,2015,2,Aula-24,"Ven, Lun, Gio, Mar",169,A Supplenza,Facoltà di Ingegneria Elettronica
+7191,4,2012,2,Aula-11,"Gio, Mer",105,Normale,Facoltà di Biochimica
+5163,3,2024,1,Aula-29,"Mar, Ven",74,A Supplenza,Facoltà di Lettere e Filosofia
+8123,5,2023,1,Aula-14,"Ven, Gio",51,A Supplenza,Facoltà di Geologia
+3263,1,2022,2,Aula-20,"Ven, Gio, Mar",43,Normale,Facoltà di Machine Learning
+1441,1,2022,1,Aula-25,"Mer, Mar",25,Normale,Facoltà di Scienze della Formazione
+7335,4,2011,2,Aula-13,"Ven, Lun, Mar, Gio",99,A Supplenza,Facoltà di Sociologia
+7693,5,2017,2,Aula-24,"Ven, Lun",81,A Supplenza,Facoltà di Diritto Privato
+7784,3,2014,1,Aula-16,"Ven, Lun",108,A Supplenza,Facoltà di Neuroscienze
+9755,2,2019,2,Aula-13,"Gio, Mer, Mar",19,Normale,Facoltà di Urbanistica
+7409,3,2024,1,Aula-26,"Mar, Lun, Ven",162,Normale,Facoltà di Programmazione Logica
+6558,4,2019,2,Aula-3,"Mar, Mer, Lun",100,A Supplenza,Facoltà di Psicologia del Lavoro
+4917,2,2022,1,Aula-9,"Lun, Ven, Mar",21,A Supplenza,Facoltà di Marketing e Comunicazione

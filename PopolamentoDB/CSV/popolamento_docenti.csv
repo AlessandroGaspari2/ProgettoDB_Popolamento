@@ -1,0 +1,60 @@
+Nome,Cognome,Ufficio,Telefono,E_mail,Tipo,NomeFacoltà
+Carl,Swanson,Uff-106,+397244687366,flopez@example.com,Associato,Facoltà di Design Industriale
+Derek,Cook,Uff-193,+392145992649,pagejennifer@example.org,Associato,Facoltà di Chimica
+Christopher,Robinson,Uff-198,+394009744767,powelljoshua@example.net,A Contratto,Facoltà di Diritto Privato
+Richard,Wells,Uff-164,+398636681831,moorerenee@example.com,Ordinario,Facoltà di Scienze Ambientali
+Ronald,Holt,Uff-184,+397858345303,kimdanny@example.net,A Contratto,Facoltà di Filosofia
+Patricia,Gardner,Uff-130,+399312865356,uweaver@example.org,A Contratto,Facoltà di Biologia
+Deanna,Soto,Uff-138,+395616664393,vcarlson@example.net,Ordinario,Facoltà di Informatica
+Jessica,Reed,Uff-200,+391312858968,john04@example.net,Ricercatore,Facoltà di Informatica Teorica
+Matthew,Levy,Uff-103,+398035496801,patricia25@example.org,Associato,Facoltà di Scienze Agrarie
+Joshua,Johnson,Uff-159,+393077570362,vdaniel@example.com,Ricercatore,Facoltà di Ingegneria Biomedica
+Donald,Cherry,Uff-126,+398902452551,ericaparsons@example.net,Ordinario,Facoltà di Antropologia
+Bruce,Watson,Uff-198,+396188803109,dclark@example.com,Ordinario,Facoltà di Fisica
+Travis,Little,Uff-194,+392159692978,barbarawilliams@example.org,Associato,Facoltà di Storia
+Jessica,Wilson,Uff-198,+394970087188,tevans@example.org,Ordinario,Facoltà di Immunologia
+Gregory,Wells,Uff-159,+393028968377,sbyrd@example.org,Ricercatore,Facoltà di Fisica
+Courtney,Ware,Uff-105,+397302752684,austinwilson@example.org,A Contratto,Facoltà di Ingegneria Informatica
+Joyce,Wolfe,Uff-182,+391830842726,teresascott@example.net,Associato,Facoltà di Bioinformatica
+Brittany,Rodriguez,Uff-176,+391524585116,kblankenship@example.net,Associato,Facoltà di Design Industriale
+John,King,Uff-151,+391558931152,brookesmith@example.org,Associato,Facoltà di Psicopatologia
+Gregory,Faulkner,Uff-189,+393772043763,kimberly55@example.com,Ricercatore,Facoltà di Farmacologia
+Brian,Lopez,Uff-107,+391033155911,bfields@example.com,Ordinario,Facoltà di Pedagogia
+Amy,Robertson,Uff-134,+398708081847,yhughes@example.org,A Contratto,Facoltà di Marketing e Comunicazione
+Michael,Novak,Uff-191,+394065282656,kpotter@example.com,Ricercatore,Facoltà di Farmacologia
+Marie,Anderson,Uff-101,+397468838730,mike17@example.com,Associato,Facoltà di Logistica e Trasporti
+Jamie,Howard,Uff-133,+396648655281,jacob41@example.net,Associato,Facoltà di Scienze Motorie
+Alyssa,Owens,Uff-197,+394734733597,johnromero@example.com,Associato,Facoltà di Scienze e Tecnologie Alimentari
+John,Estes,Uff-153,+396318443460,smithkristen@example.net,Ricercatore,Facoltà di Psicologia
+Yvonne,Mitchell,Uff-181,+397170964622,james84@example.net,Ricercatore,Facoltà di Programmazione Logica
+Rodney,Davis,Uff-104,+396900883934,donaldchavez@example.net,Ricercatore,Facoltà di Psicologia del Lavoro
+Dawn,Miller,Uff-141,+392562578057,lauriegarrett@example.org,Ricercatore,Facoltà di Biochimica
+Jill,Lee,Uff-113,+395035940506,joshuathompson@example.org,Ricercatore,Facoltà di Calcolo Numerico
+Shannon,Mayer,Uff-200,+391254435875,brownisabel@example.net,Associato,Facoltà di Biologia
+Jack,Mcdonald,Uff-179,+396914286005,toddgilbert@example.com,Ordinario,Facoltà di Immunologia
+John,Woods,Uff-198,+393658560984,stephenmendez@example.org,A Contratto,Facoltà di Scienze Veterinarie
+Nicole,Thomas,Uff-197,+393664593102,lewisalexandra@example.com,Associato,Facoltà di Chimica
+Sharon,Douglas,Uff-170,+393829980143,thomasleslie@example.net,Ricercatore,Facoltà di Scienze Ambientali
+Crystal,Washington,Uff-171,+395336234076,kristinebrowning@example.com,Ordinario,Facoltà di Scienze Motorie
+Keith,Olson,Uff-165,+395224479805,wagnerwilliam@example.com,Ricercatore,Facoltà di Fisica
+Ryan,Nelson,Uff-171,+396568734991,dwhite@example.org,Ordinario,Facoltà di Calcolo Numerico
+Michelle,Faulkner,Uff-162,+391258731077,ashleycarrillo@example.net,A Contratto,Facoltà di Medicina
+Brandi,Nelson,Uff-113,+394335184553,stephanie01@example.org,Ordinario,Facoltà di Architettura
+Lori,Cook,Uff-185,+398842198068,belljoshua@example.net,Associato,Facoltà di Marketing e Comunicazione
+Jimmy,Castro,Uff-180,+393216184158,odaniel@example.net,Associato,Facoltà di Filosofia
+Daniel,Mitchell,Uff-136,+391271481604,rthomas@example.com,A Contratto,Facoltà di Economia
+Ryan,Bautista,Uff-170,+397986873192,leslie30@example.net,Ricercatore,Facoltà di Informatica
+Bridget,Mcgrath,Uff-143,+397490423381,james16@example.org,A Contratto,Facoltà di Ingegneria Elettronica
+Colleen,Watson,Uff-133,+394258163884,billy89@example.com,Ordinario,Facoltà di Informatica Teorica
+William,Sheppard,Uff-191,+393614644758,tdiaz@example.net,Ordinario,Facoltà di Filosofia
+Melissa,Kerr,Uff-187,+397717724166,courtney94@example.com,Ricercatore,Facoltà di Scienze Geografiche
+Lydia,Aguirre,Uff-135,+391341020888,christina29@example.com,A Contratto,Facoltà di Storia
+Mary,Bowman,Uff-184,+396091140030,joseph21@example.org,A Contratto,Facoltà di Psicopatologia
+Ana,Williams,Uff-111,+392596998001,kathleenmorris@example.net,A Contratto,Facoltà di Design Industriale
+Melvin,Robinson,Uff-104,+394203750743,deborah04@example.org,A Contratto,Facoltà di Biologia
+Linda,Lee,Uff-111,+393876981295,casey34@example.com,A Contratto,Facoltà di Scienze Agrarie
+Gabriel,Kim,Uff-199,+394540987681,emcdonald@example.org,Ordinario,Facoltà di Immunologia
+Mary,Garza,Uff-153,+394236552079,elizabethjames@example.net,A Contratto,Facoltà di Design Industriale
+Suzanne,Scott,Uff-138,+395895052518,stephen47@example.net,A Contratto,Facoltà di Programmazione Logica
+Connie,Williams,Uff-190,+393003158082,cdunlap@example.org,A Contratto,Facoltà di Scienze Statistiche
+Emily,Kennedy,Uff-127,+396227489458,ugreen@example.net,A Contratto,Facoltà di Statistica Economica
