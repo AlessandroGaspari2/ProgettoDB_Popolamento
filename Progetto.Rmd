@@ -1,0 +1,435 @@
+---
+title: "Progetto"
+output: pdf_document
+date: "2025-01-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("RPostgres")
+
+library(ggplot2)
+library(scales)
+
+```
+
+
+```{r}
+# Connessione al database
+con <- dbConnect(RPostgres::Postgres(), 
+                 dbname = "ProgettoDB", #nome database
+                 host = "127.0.0.1",   #IP server
+                 port = 5432, 
+                 user ="postgres", #username
+                 password ="password")
+
+```
+
+##Query 1
+```{r}
+#1.	Tutti i corsi di laurea con almeno 5 corsi attivi e con al massimo 100 studenti iscritti.
+
+query1 <- 'SELECT cdl."Nome"
+                FROM "CorsoDiLaurea" cdl, "Strutturato" s, "Orientamento" o, "Studente" st, "IstanzaDiCorso" ic
+                WHERE cdl."Nome" = s."NomeCDL"
+                    AND  s."Codice" = ic."CodiceCorso"
+                    AND cdl."Nome" = o."NomeCDL"
+                    AND o."Nome" = st."NomeOrientamento"
+                GROUP BY cdl."Nome"
+                HAVING COUNT(DISTINCT ic."CodiceCorso") >= 5 
+                  AND COUNT(DISTINCT st."Matricola") <= 100'
+df1 <- dbGetQuery(con, query1)
+df1
+```
+
+##Dataframe Analisi 1
+
+```{r}
+#Per ogni corso di laurea il numero di corsi attivi e persone iscritte
+
+#Vista numero di iscritti per ogni corso di laurea
+viewtest <- 'CREATE VIEW "CorsoLaureaIscritti"AS
+             SELECT s."NomeCDL", COUNT(st."Matricola") AS NStudenti
+             FROM "CorsoDiLaurea" cdl, "Strutturato" s, "Studente" st, "Orientamento" o
+             WHERE cdl."Nome" = s."NomeCDL"
+                    AND cdl."Nome" = o."NomeCDL"
+                    AND o."Nome" = st."NomeOrientamento"
+             GROUP BY s."NomeCDL" '
+
+df1.test <- dbSendQuery(con, viewtest)
+df1.test
+
+#Tutti i corsi attivi per ogni corso di laurea
+query1prova <- 'SELECT cdl."Nome", COUNT(DISTINCT ic."CodiceCorso") AS "CorsiAttivi", cli."nstudenti" 
+                FROM "CorsoDiLaurea" cdl, "Strutturato" s, "Orientamento" o, "Studente" st, "IstanzaDiCorso" ic, 
+                     "CorsoLaureaIscritti" cli
+                WHERE cdl."Nome" = s."NomeCDL"
+                    AND  s."Codice" = ic."CodiceCorso"
+                    AND cdl."Nome" = o."NomeCDL"
+                    AND o."Nome" = st."NomeOrientamento"
+                    AND cli."NomeCDL" = cdl."Nome"
+                GROUP BY cdl."Nome", cli."nstudenti"    
+                '
+df1prova <- dbGetQuery(con, query1prova)
+df1prova
+```
+
+##Grafici Analisi 1
+
+```{r}
+#Due grafici. Uno ordinando per numero di corsi attivi, l'altro per numero di studenti iscritti
+
+SPC<-ggplot(data = df1prova, aes(x = CorsiAttivi, y = reorder(Nome, CorsiAttivi)))+
+       geom_col(width = 0.6, color = "black", fill = "brown1", position = "dodge")+
+       labs(y="Percorso", x = "Corsi Attivi", title = "Numero di Corsi Attivi per Corso Di Laurea")+
+       scale_x_continuous(breaks = seq(1, max(df1prova$CorsiAttivi), by=1))+
+       theme(
+          axis.line = element_line(color = "black", size = 0.5),
+          axis.ticks = element_line(color = "black")
+       )
+SPC
+
+SPI<-ggplot(data = df1prova, aes(x = nstudenti, y = reorder(Nome, nstudenti)))+ 
+       geom_col(width = 0.6, color = "black", fill = "forestgreen", position = "dodge")+
+       labs(y="Percorso", x = "Studenti Iscritti", title = "Numero di Iscritti per Corso Di Laurea")+
+       scale_x_continuous(breaks = seq(0, 450, by=50))+
+       theme(
+          axis.line = element_line(color = "black", size = 0.5),
+          axis.ticks = element_line(color = "black")
+       )
+SPI
+```
+```{r}
+ggsave("Numero di Studenti Iscritti per Corso Di Laurea.png", SPI, width = 20, height = 20, units = "cm")
+ggsave("Numero di Corsi Attivi per Corso Di Laurea.png", SPC, width = 20, height = 20, units = "cm")
+```
+
+##Query 2
+
+```{r}
+##2.	Il numero di studenti iscritti al corso di laurea con il massimo numero di iscritti.
+
+#Creazione della query richiesta
+query2 <- 'SELECT "Nome", "NStudenti"
+           FROM "Orientamento" o1
+           WHERE NOT EXISTS(SELECT *
+                            FROM "Orientamento" o2
+                            WHERE o2."NStudenti">o1."NStudenti"
+                          );'
+
+df2.1 <- dbGetQuery(con, query2)
+
+df2.1
+```
+
+## Dataframe Analisi 2
+
+```{r}
+#Grafico che mostra il numero di studenti iscritti per ogni corso di laurea
+
+NStudXorient <- 'SELECT "Nome", "NStudenti"
+                FROM "Orientamento" o1'
+StudXOrient <- dbGetQuery(con, NStudXorient)
+
+StudXOrient$Nome <- gsub("Orientamento in ", "", StudXOrient$Nome)
+
+StudXOrient
+```
+
+## Grafico Analisi 2
+
+```{r}
+
+SPO<-ggplot(data = StudXOrient, aes(x = NStudenti, y = reorder(Nome,NStudenti)))+
+       geom_col(width = 0.6, color = "black", fill = "darkorange1")+
+       labs(x="Studenti Iscritti" , y="Orientamento", title = "Studenti iscritti per Orientamento")+
+       theme(
+          axis.line = element_line(color = "black", size = 0.5),
+          axis.ticks = element_line(color = "black")
+       )
+SPO
+```
+```{r}
+ggsave("StudentiPerOrientamento.png", SPO, width = 20, height = 20, units = "cm")
+```
+
+## Query 3
+
+```{r}
+
+##3.	Il numero di corsi dell'orientamento con meno iscritti.
+
+
+#Creazione della vista necessaria
+query3 <- 'SELECT o1."Nome", COUNT(c."Codice") AS "NumeroCorsi", o1."NStudenti" AS "Iscritti" 
+          FROM "Orientamento" o1, "CorsoDiLaurea" cdl, "Strutturato" st, "Corso" c
+          WHERE o1."NomeCDL" = cdl."Nome"
+                AND cdl."Nome" = st."NomeCDL"
+                AND st."Codice" = c."Codice"
+                AND NOT EXISTS(SELECT *
+                               FROM "Orientamento" o2
+                               WHERE o2."NStudenti" < o1."NStudenti"
+                              )
+	       GROUP BY o1."NStudenti", o1."Nome"'
+
+df3 <- dbGetQuery(con,query3)
+
+df3
+```
+
+## Dataframe Analisi 3
+
+```{r}
+
+query3.1  <- 'SELECT o1."Nome", COUNT(c."Codice") AS "NumeroCorsi" 
+          FROM "Orientamento" o1, "CorsoDiLaurea" cdl, "Strutturato" st, "Corso" c
+          WHERE o1."NomeCDL" = cdl."Nome"
+                AND cdl."Nome" = st."NomeCDL"
+                AND st."Codice" = c."Codice"
+	       GROUP BY o1."Nome"'
+
+df3.1 <- dbGetQuery(con,query3.1)
+
+
+
+
+df3.1$Nome <- gsub("Orientamento in ", "", df3.1$Nome)
+
+df3.1
+
+```
+
+## Grafico Analisi 3
+
+```{r}
+#Numero di corsi per orientamento
+
+CPO<-ggplot(data = df3.1, aes(x = NumeroCorsi, y = reorder(Nome,NumeroCorsi)))+
+       geom_col(width = 0.6, color = "black", fill = "slateblue1")+
+       labs(x="Numero di Corsi", y="Orientamento", title = "Numero di Corsi per Orientamento")+
+       theme(
+          axis.line = element_line(color = "black", size = 0.5),
+          axis.ticks = element_line(color = "black")
+       )
+CPO
+
+```
+```{r}
+ggsave("CorsiPerOrientamento.png", CPO, width = 20, height = 20, units = "cm")
+```
+
+
+## Query 4
+
+```{r}
+##4.	Trovare il docente che tiene il maggior numero di corsi e il numero di corsi tenuti
+
+#In Tiene cerchiamo i docenti che tengono il numero di corsi maggiore
+
+query4 <- 'SELECT "NomeDocente", "CognomeDocente", "NumeroCorso" AS "NumeroCorsiTenuti"
+           FROM "Tiene" t1
+           WHERE NOT EXISTS(SELECT *
+                            FROM "Tiene" t2
+                            WHERE t2."NumeroCorso">t1."NumeroCorso");'
+
+df4 <- dbGetQuery(con,query4)
+df4
+```
+
+## Dataframe Analisi 4
+```{r}
+#Tipo di docente e numero di corsi tenuti
+
+query4.1<- 'SELECT DISTINCT d."Tipo", SUM(t."NumeroCorso") AS "NumeroCorsiTenuti"
+           FROM "Tiene" t, "Docente" d
+           WHERE t."CognomeDocente"= d."Cognome"
+              AND t."NomeDocente" = d."Nome"
+           GROUP BY d."Tipo"
+           '
+df4.1 <- dbGetQuery(con,query4.1)
+df4.1
+
+```
+##Grafico Analisi 4
+```{r}
+#per ogni tipo di docente il numero di corsi che tengono
+
+TPC<-ggplot(data = df4.1, aes(x = Tipo, y = NumeroCorsiTenuti))+
+       geom_col(width = 0.6, color = "black", fill = "slategrey")+
+       labs(x="Tipo di Docente", y="Numero di Corsi", title = "Numero di Corsi per Tipo di Docente")+
+       scale_y_continuous(breaks = seq(0, max(df4.1$NumeroCorsiTenuti), by=8))+
+       theme(
+          axis.line = element_line(color = "black", size = 0.5),
+          axis.ticks = element_line(color = "black")
+       )
+TPC
+
+```
+```{r}
+ggsave("CorsiPerTipoDocente.png", TPC, width = 20, height = 15, units = "cm")
+```
+
+
+## Query 5
+
+```{r}
+#Vista esami per studente
+view5 <- 'CREATE VIEW "EsamiPerStudente" AS
+          SELECT "Matricola", COUNT("Nome") AS "EsamiTotali"
+          FROM "Sostiene"
+          GROUP BY "Matricola";'
+
+df5.1 <- dbSendQuery(con, view5)
+df5.1
+
+```
+
+```{r}
+##5.	Trovare lo studente che ha svolto più esami di tutti
+query5 <- 'SELECT s."Matricola", s."Nome", e1."EsamiTotali"
+           FROM "EsamiPerStudente" e1, "Studente" s
+           WHERE e1."Matricola" = s."Matricola"
+           AND NOT EXISTS(SELECT *
+                          FROM "EsamiPerStudente" e2
+                          WHERE e2."EsamiTotali">e1."EsamiTotali");'
+
+df5 <- dbGetQuery(con,query5)
+df5
+
+```
+
+## Dataframe Analisi 5
+
+```{r}
+#Distribuzione del numero di esami svolti dagli studenti
+#x numero esami
+#y numero studenti che hanno effettuato x numero di esami
+
+ordered <- 'SELECT "EsamiTotali", COUNT("Matricola") AS "NStudenti"
+      FROM "EsamiPerStudente"
+      GROUP BY "EsamiTotali"
+      ORDER BY "EsamiTotali"'
+
+df5.2 <- dbGetQuery(con, ordered)
+df5.2
+```
+
+##Grafico Analisi 5
+
+```{r}
+#Grafico che mostra il numero di studenti che hanno superato x esami
+
+SPE<-ggplot(data=df5.2, aes(x = EsamiTotali, y = NStudenti)) +
+  geom_col(color = "black", fill = "steelblue")+
+  labs(x= "Esami Superati", y="Numero di Studenti", title = "Numero di Studenti per Numero di Esami")+
+  scale_y_continuous(labels = scales::comma_format())+
+  scale_x_continuous(breaks = df5.2$EsamiTotali)+
+  theme(
+    axis.line = element_line(color = "black", size = 0.5),
+    axis.ticks = element_line(color = "black")
+  )
+SPE
+
+ggsave("StudentiPerEsame.png", SPE, width = 20, height = 15, units = "cm")
+
+```
+
+
+## Query 6
+
+```{r}
+#Vista 
+view6 <- 'CREATE VIEW "DocentiPerFacolta" AS
+	        SELECT d."NomeFacolta", COUNT(d."Nome") AS "NDocenti", SUM(t."NumeroCorso") AS "NCorsi"
+	        FROM "Docente" d, "Tiene" t
+          WHERE d."Nome"=t."NomeDocente" 
+          AND d."Cognome"=t."CognomeDocente"
+	        GROUP BY "NomeFacolta";'
+
+df6.1 <- dbSendQuery(con, view6)
+df6.1
+
+```
+
+```{r}
+#6.	Trovare la facoltà con il maggior numero di docenti e il numero totale di corsi offerti:
+
+query6 <- 'SELECT df1."NomeFacolta", df1."NDocenti", df1."NCorsi" AS "NumeroCorsiTotale"
+           FROM "DocentiPerFacolta" df1 
+           WHERE NOT EXISTS (SELECT *
+   		                       FROM "DocentiPerFacolta" df2
+                             WHERE df2."NDocenti">df1."NDocenti")'
+
+
+df6 <- dbGetQuery(con,query6)
+df6
+```
+
+##Dataframe Analisi 6
+
+```{r}
+#Per le 10 facoltà con il maggior numero di docenti, il numero di corsi offerti.
+#x Le 10 facoltà con maggior numero di docenti
+#y Il numero di corsi offerti per quella facoltà
+
+query6.2 <- 'SELECT "NomeFacolta", "NDocenti", "NCorsi" AS "NumeroCorsiTotale"
+        FROM "DocentiPerFacolta"
+        ORDER BY "NDocenti" DESC
+        LIMIT 10'
+
+df6.2 <- dbGetQuery(con, query6.2)
+
+df6.2$NomeFacolta <- gsub("Facoltà di ", "", df6.2$NomeFacolta)
+
+df6.2
+
+```
+
+##Grafico Analisi 6
+
+```{r}
+#Grafico che mostra per le 10 facoltà con il maggior numero di docenti, il numero di corsi offerti.
+
+FAC <- ggplot(data = df6.2, aes(x = NumeroCorsiTotale, y = reorder(NomeFacolta, NDocenti))) +
+  geom_col(color = "black", fill = "mediumspringgreen") +
+  labs(
+    y = "Facoltà",
+    x = "Numero di Corsi Offerti",
+    title = "Corsi Offerti dalle 10 Facoltà con più Docenti"
+  ) +
+  theme(
+    axis.line = element_line(color = "black", size = 0.5),
+    axis.ticks = element_line(color = "black")
+  )
+FAC
+
+ggsave("CorsiPerFacoltaTop10.png", FAC, width = 20, height = 15, units = "cm")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
